@@ -19,9 +19,22 @@ group = mod_group_id
 repositories {
     mavenLocal()
 
+    maven { // JEI
+        url "https://maven.blamejared.com"
+    }
+    maven { // TOP
+        url "https://maven.k-4u.nl"
+    }
+
 }
 dependencies {
+    //implementation "net.neoforged:neoforge:${neo_version}"
 
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
