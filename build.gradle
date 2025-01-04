@@ -30,11 +30,13 @@ repositories {
 dependencies {
     //implementation "net.neoforged:neoforge:${neo_version}"
 
-    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    //if you want to use JEI and TOP, uncomment the code below. THe line above has been found to have some vulnerabilities.
+//    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+//    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+//    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+//    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
 
-    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
+
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
