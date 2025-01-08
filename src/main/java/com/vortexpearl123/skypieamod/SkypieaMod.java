@@ -1,5 +1,6 @@
 package com.vortexpearl123.skypieamod;
 
+import com.vortexpearl123.skypieamod.blocks.ModBlocks;
 import com.vortexpearl123.skypieamod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -109,6 +110,10 @@ public class SkypieaMod {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.DIAL);
             event.accept(ModItems.HEAT_DIAL);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.SNOWBLOCK);
         }
     }
 

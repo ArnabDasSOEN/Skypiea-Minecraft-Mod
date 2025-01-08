@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "" : {
+      "model": "skypieamod:block/snow_block"
+    }
+  }
+}

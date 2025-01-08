@@ -18,13 +18,11 @@ public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SkypieaMod.MODID);
 
-    public static final DeferredBlock<Block> SNOWBLOCK = registerBlock("snowBlock",
-            () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> SNOWBLOCK = registerBlock("snow_block",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.SNOW)
             ));
-
-
-
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
