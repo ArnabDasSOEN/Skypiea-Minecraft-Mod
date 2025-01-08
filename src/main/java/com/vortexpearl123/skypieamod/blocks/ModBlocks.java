@@ -4,7 +4,6 @@ import com.vortexpearl123.skypieamod.SkypieaMod;
 import com.vortexpearl123.skypieamod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.component.BlockItemStateProperties;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,13 +17,29 @@ public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SkypieaMod.MODID);
 
-    public static final DeferredBlock<Block> SNOWBLOCK = registerBlock("snow_block",
+    //BLOCKS
+    public static final DeferredBlock<Block> CLOUDBLOCK = registerBlock("cloud_block",
             () -> new Block(
                     BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.SNOW)
+                    .strength(0.55f).sound(SoundType.SNOW)
             ));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //METHODS TO REGISTER
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block); //create and register the block
         registerBlockItem(name, toReturn); //register the block item associated with it
@@ -39,7 +54,6 @@ public class ModBlocks {
         //the () -> {} is a concise way of defining an anonymous function. It's supposed to be a lambda expression
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-
     public static void register(IEventBus ieb){
         BLOCKS.register(ieb);
         //you're taking an event buss and making the BLOCKS deferedRegister, register it. This makes the BLOCKS deferedRegister listen for events on the bus

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "" : {
+      "model": "skypieamod:block/cloud_block"
+    }
+  }
+}

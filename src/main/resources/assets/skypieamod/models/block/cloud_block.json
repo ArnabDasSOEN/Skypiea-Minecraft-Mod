@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "skypieamod:block/snow_block"
+    "all": "skypieamod:block/cloud_block"
   }
 }

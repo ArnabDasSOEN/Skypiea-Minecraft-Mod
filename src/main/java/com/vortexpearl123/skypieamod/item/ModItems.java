@@ -14,6 +14,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SkypieaMod.MODID);
 
 
+
     public static final DeferredItem<Item> DIAL = ITEMS.register("dial", ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> HEAT_DIAL = ITEMS.register("heat_dial", () -> new Item(new Item.Properties()));
 
